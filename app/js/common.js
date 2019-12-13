@@ -1,6 +1,6 @@
 	$(document).ready(function () {
 		 
-/// Menu
+	// Menu
 
 	$('.menu-triger').click(function () {
 
@@ -13,7 +13,9 @@
 			$('nav ul').removeAttr('style');
 		}
 	});
-		});
+
+	});
+		
 
 
 $(function() {
@@ -127,8 +129,6 @@ function block_out(op, elem) {
 
 }
 
-
-
 function to_top() {
 
 	var root = jQuery(document);
@@ -145,6 +145,10 @@ function to_top() {
 	}
 
 }
+
+// My polifil IE
+
+flexibility(document.documentElement);
 
 
 

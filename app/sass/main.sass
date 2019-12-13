@@ -2,6 +2,7 @@
 @import "fonts"
 @import "libs"
 
+
 ::placeholder
 	color: #666
 
@@ -41,7 +42,7 @@ b, strong
 ////////////////////////////  My style   ///////////////////////
 
 .wrapper
-	main-width: 100%
+	width: 100%
 	height: inherit
 	margin: 0 auto
 	overflow: hidden
@@ -203,9 +204,11 @@ b, strong
 	width: 100%
 	background-color: #ffffff
 	display: flex
+	flex-direction: column
 	justify-content: center
 
 .there-section
+	margin: 0 auto
 	margin-top: 20px
 	padding-bottom: 50px
 
@@ -282,6 +285,7 @@ b, strong
 	background-color: #EEEEEE
 	width: 100%
 	display: flex
+	flex-direction: column
 	justify-content: center
 
 .services
@@ -289,6 +293,7 @@ b, strong
 	background-color: #eeeeee
 	margin-top: 20px
 	margin-bottom: 50px
+	
 
 .services-info
 	width: 100%
@@ -318,24 +323,69 @@ b, strong
 
 .services-menu
 	width: 100%
-	display: flex
-	justify-content: center
 	background-color: #EEEEEE
 	color: #202528
 
 
+.icon-container
+	width: 100%
+	margin-top: 20px
+	display: flex
+	justify-content: space-between
+
+.icon-colum
+	width: 27%
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+
 .icon-block
-	width: 200px
-	height: 200px
-	background-color: #e84c3d
+	width: 100%
+	display: flex
+	justify-content: center
+	padding: 20px
+	background-color: #E84C3D
+
+.icon-fa
+	width: 150px
+	height: 150px
 	display: flex
 	justify-content: center
 	align-items: center
-	margin: 20px
 	color: #ffffff
-	font-size: 60px
+	font-size: 90px
 	&:hover
-		border: 1px solid #ffffff
+		color: #EEEEEE
+
+.icon-header
+	width: 100%
+	display: flex
+	justify-content: center
+	margin-top: 10px
+	margin-bottom: 10px
+
+.header
+	font-size: 18px
+
+.icon-text
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: flex-start
+
+.text
+	width: 90%
+	height: 90px
+	text-align: center
+	overflow: hidden
+	margin-top: 10px
+	margin-bottom: 50px
+	font-size: 14px
+	color: #70777d
+	
+
+	
+
 
 .web-info
 	width: 100%
@@ -378,6 +428,9 @@ b, strong
 	padding-top: 50px
 	padding-bottom: 50px
 
+.latest-work
+	width: 100%
+
 .latest-more
 	background-color: #ffffff
 	display: flex
@@ -401,12 +454,13 @@ b, strong
 .latest-post
 	width: 100%
 	height: auto
+	-js-display: flex
 	display: flex
 	flex-wrap: wrap
 	justify-content: center
 
 .latest-cart
-	max-width: 280px
+	width: 280px
 	height: auto
 	background-color: #ffffff
 	color: #6d7b8a
@@ -442,8 +496,12 @@ b, strong
 	display: flex
 	justify-content: center
 
+.brand-block
+	width: 100%
+	display: flex
+
 .img 
-	max-width: 235px
+	width: 235px
 	height: auto
 	margin-top: 25px
 	margin-bottom: 25px
@@ -479,9 +537,8 @@ b, strong
 
 .about-text
 	width: 100%
-	display: flex
-	justify-content: center
 	color: #808080
+	overflow: hidden
 
 .about-loader
 	width: 100%
