@@ -1,5 +1,5 @@
-	$(document).ready(function () {
-		 
+$(function () {
+
 	// Menu
 
 	$('.menu-triger').click(function () {
@@ -14,56 +14,76 @@
 		}
 	});
 
-	});
-		
+	// carusel one
 
-
-$(function() {
-
-
-	$("#viewport").viewportChecker({
-
-		callbackFunction: function () {
-
-			//ТУТ СКРИПТ ИЛИ НАСТРОЙКА
-
-			$('.circlechart').circlechart(); // Initialization
-
-		}
-	});
-
-// Используем два скрипта. Один отвечает за прогрузку прилоадера посути это плагин.
-// А другой скрипт отвечает за отработку это плагина при прокрутке к блоку в котором он находится.
-
-
-	// my slider " new Siema "
-
-	const mySiema = new Siema({
-
-		duration: 350,
-	});
-
-	document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-
-	document.querySelector('.next').addEventListener('click', () => mySiema.next());
-
-	// my owl carusel 2
-
-	$('.owl-carousel').owlCarousel({
-
+	var carusel1 = $('.owl-carousel');
+	carusel1.owlCarousel({
 		items: 1,
-
-		dots: false,
+		dots: false
 		
-		nav: true
+	});
+	// Go to the next item
+	$('.customNextBtn').click(function () {
+		console.log('dcdcdcs');
+		carusel1.trigger('next.owl.carousel');
+	})
+	// Go to the previous item
+	$('.customPrevBtn').click(function () {
+		// With optional speed parameter
+		// Parameters has to be in square bracket '[]'
+		carusel1.trigger('prev.owl.carousel', [300]);
 	})
 
+
+
+// carusel two
+
+var carusel2 = $('.owl-carousel');
+carusel2.owlCarousel({
+	items: 1,
+	dots: false
+
+});
+
+// Go to the next item
+$('#customNextBtn').click(function () {
+	console.log('dcdcdcs');
+	carusel2.trigger('next.owl.carousel');
+})
+// Go to the previous item
+$('#customPrevBtn').click(function () {
+	// With optional speed parameter
+	// Parameters has to be in square bracket '[]'
+	carusel2.trigger('prev.owl.carousel', [300]);
+})
+
+
+//Cirle Loader
+
+
+	$(function () {
+
+
+		$("#viewport").viewportChecker({
+
+			callbackFunction: function () {
+
+				//ТУТ СКРИПТ ИЛИ НАСТРОЙКА
+
+				$(".progress-bar").loading();
+
+			}
+		});
+
+	});
+
+	
 
 
 });
 
 
-	//btton top
+//btton top
 
 
 document.onscroll = my_func; // Вызываем у нашего документа метод onscroll 
@@ -146,14 +166,8 @@ function to_top() {
 
 }
 
-// My polifil IE
 
-flexibility(document.documentElement);
-
-
-
-
-
+ 
 
 
 
