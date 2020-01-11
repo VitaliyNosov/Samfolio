@@ -39,8 +39,6 @@ body
 b, strong
 	font-weight: bold
 
-
-
 ////////////////////////////  My style   ///////////////////////
 
 .wrapper
@@ -71,7 +69,6 @@ b, strong
 	background-color: #E84C3D
 	&:hover
 		background-color: #BF3E32
-
 
 .container-fluid
 	margin: 0
@@ -157,13 +154,10 @@ b, strong
 		color: #e84c3d
 		border: 2px solid #e84c3d
 
-
-
 .text-section
 	color: #ffffff
 	font-family: "Fjalla One"
 	
-
 .autor-content
 	margin-top: 130px
 	color: #e7e7e7
@@ -184,7 +178,6 @@ b, strong
 		height: 2px
 		width: 150px
 		color: #ffffff
-
 
 .arrows
 	margin-top: 10px
@@ -280,7 +273,6 @@ b, strong
 	&:hover
 		background-color: #e84c3d
 
-
 // servicese section
 
 .services-block
@@ -296,7 +288,6 @@ b, strong
 	margin-top: 20px
 	margin-bottom: 50px
 	
-
 .services-info
 	width: 100%
 	color: #70777d
@@ -328,7 +319,6 @@ b, strong
 	background-color: #EEEEEE
 	color: #202528
 
-
 .icon-container
 	width: 100%
 	margin-top: 20px
@@ -359,7 +349,6 @@ b, strong
 	&:hover
 		color: #EEEEEE
 
-
 .icon-header
 	width: 100%
 	display: flex
@@ -385,10 +374,6 @@ b, strong
 	margin-bottom: 50px
 	font-size: 14px
 	color: #70777d
-	
-
-	
-
 
 .web-info
 	width: 100%
@@ -412,8 +397,9 @@ b, strong
 	display: flex
 	justify-content: center
 	color: #939585
-	strong 
+	a
 		color: #e84c3d
+		margin-left: 5px
 
 // latest-work section
 
@@ -475,10 +461,15 @@ b, strong
 	display: flex
 	justify-content: center
 	align-items: center
+	overflow: hidden
 	img 
-		&:hover
-			width: 279px
-			height: 219px
+		width: 264px
+		height: 207px
+
+.transition
+	transition: all 0.7s ease-out
+	&:hover
+		 transform: scale(1.1)
 
 
 .cart-header
@@ -541,7 +532,6 @@ b, strong
 	&:hover
 		color: #ffffff
 		background-color: #1A1413
-
 
 // about-my section
 
@@ -627,9 +617,6 @@ b, strong
 	display: flex
 	justify-content: flex-end
 
-
-
-
 // comment section
 
 .comment-fluid
@@ -693,7 +680,6 @@ b, strong
 	i 
 		font-size: 12px
 
-
 // contact section
 
 .contact-fluid
@@ -724,11 +710,42 @@ b, strong
 	width: 100%
 	display: flex
 	justify-content: center
+	align-items: center
 	margin-top: -30%
 	margin-left: 5%
 	color: #ffffff
 	font-size: 22px
 
+.location
+	width: 20px
+	height: 20px
+	margin-right: 2%
+	border-radius: 50%
+	background-color: rgba(206, 26, 26, 0.5);
+	display: flex
+	justify-content: center
+	align-items: center
+	animation: location-two 1.5s infinite alternate
+
+.location-animate
+	width: 12px
+	height: 12px
+	background-color: #CE1A1A
+	border-radius: 50px
+	animation: location-one 1.5s infinite alternate
+
+@keyframes location-one
+	0%
+		background-color: #D03A3A
+	100%
+		background-color: #890000
+
+@keyframes location-two
+	0%
+		background-color: rgba(206, 26, 26, 0.8);
+	100%
+		background-color: rgba(206, 26, 26, 0.5);
+	
 .input-form
 	width: 80%
 	display: flex
@@ -823,13 +840,6 @@ b, strong
 			&:hover
 				text-decoration: none
 				color: #FF6254
-
-
-
-
-
-
-	
 
 
 @import "media" // Always at the end
